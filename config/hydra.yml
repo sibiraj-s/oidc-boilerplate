@@ -1,0 +1,21 @@
+urls:
+  self:
+    issuer: https://gpkjoq-ip-220-158-156-192.tunnelmole.net
+
+secrets:
+  system:
+    # https://www.ory.sh/docs/hydra/self-hosted/secrets-key-rotation#rotation-of-hmac-token-signing-and-database-and-cookie-encryption-keys
+    # keep old encryption key and add new one if required
+    # - new key here
+    - youReallyNeedToChangeThis
+
+oidc:
+  subject_identifiers:
+    supported_types:
+      - public
+
+strategies:
+  scope: exact
+  access_token: jwt
+  jwt:
+    scope_claim: list
